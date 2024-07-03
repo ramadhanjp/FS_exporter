@@ -72,6 +72,7 @@ systemctl restart prometheus
 Pergi ke *Create > Import*. Cari dashboard rootfs_exporter dan pilih prometheus sebagai datasource nya.
 
 ###### 2. Contoh dashboard 
+![dashboard_rootfs](https://github.com/ramadhanjp/RootFS_exporter/assets/173976735/1477bdeb-720b-4c17-a4f8-e6626eaee7ac)
 
 
 
