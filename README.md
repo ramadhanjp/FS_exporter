@@ -21,13 +21,18 @@ wget https://github.com/ramadhanjp/FS_exporter/releases/download/prometheus/fs_e
 ###### 2. Pindahkan file binary ke directory yang sesuai (misalnya /usr/local/bin)
 
 ```sh
+tar xvfz fs_exporter.linux-amd64.tar.gz
+```
+###### 3. Pindahkan file binary ke directory yang sesuai (misalnya /usr/local/bin)
+
+```sh
 mv fs_exporter /usr/local/bin
 ```
-###### 3. Buat file *fs_exporter* menjadi executable
+###### 4. Buat file *fs_exporter* menjadi executable
 ```sh
 chmod +x /usr/local/bin/fs_exporter
 ```
-###### 4. Buat file unit untuk fs_exporter
+###### 5. Buat file unit untuk fs_exporter
 ```sh
 nano /etc/systemd/system/fs_exporter.service
 ```
@@ -45,7 +50,7 @@ Restart=always
 [Install]
 WantedBy=default.target
 ```
-###### 5.Reload systemd dan start *fs_exporter*
+###### 6.Reload systemd dan start *fs_exporter*
 ```sh
 systemctl daemon-reload
 systemctl enable fs_exporter
