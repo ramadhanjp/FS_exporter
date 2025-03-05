@@ -15,21 +15,21 @@ Fungsi utama RootFS_exporter antara lain:
 ###### 1. Download *rootfs_exporter* menggunakan wget
 
 ```sh
-wget https://github.com/ramadhanjp/RootFS_exporter/releases/download/prometheus/rootfs_exporter.linux-amd64.tar.gz
+wget https://github.com/ramadhanjp/RootFS_exporter/releases/download/prometheus/fs_exporter.linux-amd64.tar.gz
 ```
 
 ###### 2. Pindahkan file binary ke directory yang sesuai (misalnya /usr/local/bin)
 
 ```sh
-mv rootfs_exporter /usr/local/bin
+mv fs_exporter /usr/local/bin
 ```
 ###### 3. Buat file *rootfs_exporter* menjadi executable
 ```sh
-chmod +x /usr/local/bin/rootfs_exporter
+chmod +x /usr/local/bin/fs_exporter
 ```
 ###### 4. Buat file unit untuk rootfs_exporter
 ```sh
-nano /etc/systemd/system/rootfs_exporter.service
+nano /etc/systemd/system/fs_exporter.service
 ```
 Isi file dengan konfigurasi berikut
 ```sh
@@ -39,7 +39,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/rootfs_exporter
+ExecStart=/usr/local/bin/fs_exporter
 Restart=always
 
 [Install]
@@ -48,8 +48,8 @@ WantedBy=default.target
 ###### 5.Reload systemd dan start *rootfs_exporter*
 ```sh
 systemctl daemon-reload
-systemctl enable rootfs_exporter
-systemctl start rootfs_exporter
+systemctl enable fs_exporter
+systemctl start fs_exporter
 ```
 #### Langkah 2: Konfigurasi Prometheus
 ###### 1. Edit file konfigurasi Prometheus
