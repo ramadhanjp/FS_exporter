@@ -58,7 +58,7 @@ systemctl start fs_exporter
 scrape_configs:
   - job_name: 'fs_exporter'
     static_configs:
-      - targets: ['<IP_ADDRESS>:8000']
+      - targets: ['<IP_ADDRESS>:3939']
 ```
 > Note: Gantilah `<IP_ADDRESS>` dengan alamat IP server di mana fs_exporter berjalan. Jika rootfs_exporter berjalan di server yang sama dengan prometheus, Anda bisa menggunakan localhost
 
@@ -68,7 +68,7 @@ systemctl restart prometheus
 ```
 
 #### Langkah 3: Integrasi dengan Grafana
-###### 2. Import Dashboard untuk rootfs_exporter
+###### 2. Import Dashboard untuk fs_exporter
 Pergi ke *Create > Import*. Cari dashboard fs_exporter dan pilih prometheus sebagai datasource nya.
 
 ###### 2. Contoh dashboard 
