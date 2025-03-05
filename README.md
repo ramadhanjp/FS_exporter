@@ -18,7 +18,7 @@ Fungsi utama FS_exporter antara lain:
 wget https://github.com/ramadhanjp/FS_exporter/releases/download/prometheus/fs_exporter.linux-amd64.tar.gz
 ```
 
-###### 2. Pindahkan file binary ke directory yang sesuai (misalnya /usr/local/bin)
+###### 2. Tar file yang sudah di download
 
 ```sh
 tar xvfz fs_exporter.linux-amd64.tar.gz
