@@ -1,0 +1,180 @@
+{
+  "__inputs": [
+    {
+      "name": "DS_PROMETHEUS",
+      "label": "prometheus",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "prometheus",
+      "pluginName": "Prometheus"
+    }
+  ],
+  "__elements": {
+    "f50f9553-c4ad-4939-a285-2e09eef2e491": {
+      "name": "Directory Root FS",
+      "uid": "f50f9553-c4ad-4939-a285-2e09eef2e491",
+      "kind": 1,
+      "model": {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "${DS_PROMETHEUS}"
+        },
+        "description": "",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "continuous-GrYlRd"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "decbytes",
+            "unitScale": true
+          },
+          "overrides": []
+        },
+        "options": {
+          "displayMode": "lcd",
+          "maxVizHeight": 300,
+          "minVizHeight": 35,
+          "minVizWidth": 8,
+          "namePlacement": "auto",
+          "orientation": "horizontal",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showUnfilled": true,
+          "sizing": "manual",
+          "valueMode": "color"
+        },
+        "pluginVersion": "10.3.1",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "b1889bf0-8209-4d08-846f-8e870eea2e44"
+            },
+            "disableTextWrap": false,
+            "editorMode": "builder",
+            "expr": "directory_size_bytes{instance=\"$Targets\", directory!~\"/proc|/lib32|/lib64|/libx32\"}",
+            "fullMetaSearch": false,
+            "includeNullMetadata": true,
+            "instant": false,
+            "legendFormat": "{{directory}}",
+            "range": true,
+            "refId": "A",
+            "useBackend": false
+          }
+        ],
+        "title": "Directory",
+        "type": "bargauge"
+      }
+    }
+  },
+  "__requires": [
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "10.3.1"
+    },
+    {
+      "type": "datasource",
+      "id": "prometheus",
+      "name": "Prometheus",
+      "version": "1.0.0"
+    }
+  ],
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": null,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "gridPos": {
+        "h": 20,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "libraryPanel": {
+        "uid": "f50f9553-c4ad-4939-a285-2e09eef2e491",
+        "name": "Directory Root FS"
+      }
+    }
+  ],
+  "refresh": "5s",
+  "schemaVersion": 39,
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {},
+        "datasource": {
+          "type": "prometheus",
+          "uid": "${DS_PROMETHEUS}"
+        },
+        "definition": "label_values(python_info{instance!~\"192.168.20.184:8000\"},instance)",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "Targets",
+        "options": [],
+        "query": {
+          "qryType": 1,
+          "query": "label_values(python_info{instance!~\"192.168.20.184:8000\"},instance)",
+          "refId": "PrometheusVariableQueryEditor-VariableQuery"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Root File System Monitoring",
+  "uid": "ddpuxevmornk0f",
+  "version": 8,
+  "weekStart": ""
+}
