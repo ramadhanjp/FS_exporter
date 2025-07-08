@@ -73,7 +73,7 @@ systemctl restart prometheus
 ```
 
 #### Langkah 3: Integrasi dengan Grafana
-###### 2. Import Dashboard untuk fs_exporter
+###### 1. Import Dashboard untuk fs_exporter
 Pergi ke *Create > Import*. Cari dashboard fs_exporter dan pilih prometheus sebagai datasource nya.
 
 ###### 2. Contoh dashboard 
