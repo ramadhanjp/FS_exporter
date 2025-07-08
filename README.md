@@ -79,16 +79,6 @@ Pergi ke *Create > Import*. Cari dashboard fs_exporter dan pilih prometheus seba
 ###### 2. Contoh dashboard 
 ![dashboard_rootfs](https://github.com/ramadhanjp/RootFS_exporter/assets/173976735/1477bdeb-720b-4c17-a4f8-e6626eaee7ac)
 
-
-
-## Docker
-
-
-
-## License
-
-MIT
-
 **Free Software, Hell Yeah!**
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
