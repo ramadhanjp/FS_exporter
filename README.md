@@ -3,10 +3,10 @@
 
 ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=Prometheus&logoColor=white) ![Grafana](https://img.shields.io/badge/grafana-%23F46800.svg?style=for-the-badge&logo=grafana&logoColor=white)
 
-FS_exporter adalah sebuah tool atau exporter yang digunakan untuk memonitoring resource Root File System pada sistem operasi Linux menggunakan Prometheus dan Grafana. Dengan FS_exporter, kamu dapat mengumpulkan berbagai metrik terkait penggunaan storage pada file system root, seperti total storage, storage yang digunakan, storage yang tersedia, serta file system yang penuh. Exporter ini memungkinkan integrasi dengan Prometheus untuk scraping metrik, dan Grafana untuk visualisasi data tersebut dalam bentuk grafik atau dashboard yang mudah dipahami.
+FS_exporter adalah sebuah tool atau exporter yang digunakan untuk memonitoring resource Root File System pada sistem operasi Linux menggunakan Prometheus dan Grafana. Dengan FS_exporter, kamu dapat mengumpulkan metrik terkait penggunaan storage pada file system root, seperti size dari folder yang berada di direktori root. Exporter ini memungkinkan integrasi dengan Prometheus untuk scraping metrik, dan Grafana untuk visualisasi data tersebut dalam bentuk grafik atau dashboard yang mudah dipahami.
 
 Fungsi utama FS_exporter antara lain:
-- Mengumpulkan Metrik Storage: Total kapasitas storage, storage yang digunakan, dan storage yang tersedia pada root file system.
+- Mengumpulkan Metrik Storage: Size folder pada root file system.
 - Monitoring File System: Mengidentifikasi file system yang penuh dan file apa yang menyebabkan penuh.
 - Integrasi dengan Prometheus dan Grafana: Memungkinkan pengumpulan data oleh Prometheus dan visualisasi di Grafana.
 
